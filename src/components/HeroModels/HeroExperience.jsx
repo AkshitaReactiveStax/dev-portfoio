@@ -12,7 +12,6 @@ const HeroExperience = () => {
 
   return (
     <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
-     
       <OrbitControls
         enablePan={false}
         enableZoom={!isTablet}
@@ -27,14 +26,14 @@ const HeroExperience = () => {
         <meshStandardMaterial color="blue" />
       </mesh>
 
-        <HeroLights/>
+      <HeroLights />
 
-        <Particles count={500}/>
+      <Particles count={500} />
 
-
-      <group scale={isMobile ? 0.7 : 1} 
-      position={[0, -3.5, 0]}
-      rotation={[ 0 , -Math.PI /4 , 0]}
+      <group
+        scale={isMobile ? 0.7 : 1}
+        position={[0, -3.5, 0]}
+        rotation={[0, -Math.PI / 4, 0]}
       >
         <Room />
       </group>
